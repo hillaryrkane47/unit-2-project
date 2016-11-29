@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Sign Up</title>
+  <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <div class="main-container">
+      <div class="border-container">
+        <h1>Sign Up To this sweet recipe thang</h1>
+        <div class="col-lg-6 center-block">
+          <div class="well bs-component">
+
+            <form class="form-horizontal" action="/signup" method="post">
+              <fieldset>
+                <legend>Sign Up</legend>
+                <div class="form-group">
+                  <label for="inputEmail" class="col-lg-2 control-label">Email</label>
+
+                  <div class="col-lg-10">
+                    <input name="email" type="text" class="form-control" id="inputEmail signup-email" placeholder="Email">
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="inputPassword" class="col-lg-2 control-label">Password</label>
+
+                  <div class="col-lg-10">
+                    <input name="password" type="password" class="form-control" id="inputPassword signup-pw" placeholder="Password">
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <div class="col-lg-10 col-lg-offset-2">
+                    <button type="submit" class="btn btn-primary" id="sign-up-btn">Join!</button>
+                  </div>
+                </div>
+              </fieldset>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+  <script src="/scripts/jquery.js"></script>
+  <script src='/scripts/config.js'></script>
+  <script src="/scripts/script.js"></script>
+</body>
+</html>

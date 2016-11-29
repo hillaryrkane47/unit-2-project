@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home</title>
+    <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <div class="main-container">
+      <div class="border-container">
+      THIS IS WHERE APP DESCRIPTION WILL GOOO
+        {{^logged_in}}
+          <h1><a href="/signup">Sign up</a> if you want access to allergy or dietary specific recipes!  Already a user? Login <a href = "/login">here</a>.</h1>
+          <br>
+        {{/logged_in}}
+      </div>
+    </div>
+<script src = "/scripts/jquery.js"></script>
+<script src='/scripts/config.js'></script>
+<script src = "/scripts/script.js"></script>
+</body>
+</html>
+

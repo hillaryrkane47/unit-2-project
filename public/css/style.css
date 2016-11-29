@@ -1,0 +1,25 @@
+* {
+    /* background-color: pink; */
+    text-align: center;
+}
+  .main-container {
+  width: 980px;
+  margin: 0 auto;
+}
+
+h1 {
+  text-align: center;
+}
+
+.center-block { float: none }
+
+
+/* dashboard */
+.form-vertical {
+  display:  inline;
+}
+
+fieldset {
+  display: inline;
+  text-align: auto;
+}
