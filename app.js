@@ -6,6 +6,7 @@ const mustacheExpress = require('mustache-express');
 const bodyParser = require("body-parser");
 const session = require('express-session');
 const bcrypt = require('bcrypt');
+const fetch = require('fetch')
 
 // configuring packages
 app.engine('html', mustacheExpress());
@@ -62,8 +63,9 @@ app.post("/signup", function(req, res){
       "INSERT INTO users (email, password_digest) VALUES ($1, $2)",
       [data.email, hash]
       ).then(function(){
-        res.send('User created!');
-        res.redirect('/preferences/index');
+        // res.send('User created!');
+        res.redirect('/search');
+        // alert("Select your allergy and dietary preferences!")
       })
   });
 })
@@ -93,7 +95,7 @@ app.post("/login", function(req, res){
       bcrypt.compare(data.password, user.password_digest, function(err, cmp){
         if(cmp){
           req.session.user = user;
-          res.redirect('/dashboard');
+          res.redirect('/dashboard/'+user.id);
         } else {
           res.send('Email/Password not found.')
         }
@@ -101,21 +103,50 @@ app.post("/login", function(req, res){
     });
 });
 
-
-// preferences/index.html
-app.get('/preferences',function(req,res){
-  res.render('preferences/index');
-});
-
-// dashboard/index.html
-app.get('/dashboard',function(req,res){
-  res.render('dashboard/index');
-});
+app.post('/save', function(req,res){
+  if (req.session.user){
+    console.log('yey')
+    var user = req.session.user.id
+    var savedRecipe = req.body.recipe
+    db.none(
+    "INSERT INTO meals (apiID, userID) VALUES($1, $2)",
+    [savedRecipe, user]).then(function(){
+      res.redirect('/dashboard/'+user)
+    })
+  }
+})
 
 // search/index.html
 app.get('/search',function(req,res){
   res.render('search/index');
 });
+
+// search/show.html
+app.get('/dashboard/:id',function(req,res){
+  db.many("SELECT apiid FROM meals WHERE userid = $1",[req.session.user.id]).then(function(data){
+     var mykey = config.MY_KEY;
+     var myid = config.MY_ID;
+     $.each(data, function(index, value){
+        var apiCall = 'http://api.yummly.com/v1/api/recipe/'+value+'?_app_id=' + myid + '&_app_key=' + mykey
+      fetch(apiCall).then(function(data){
+        return JSON.parse(data)
+      }).then(function(json){
+        console.log(json)
+        res.render('search/show', json);
+      })
+     })
+
+
+  })
+
+});
+
+
+
+// // search/index.html
+// app.get('/search',function(req,res){
+//   res.render('search/index');
+// });
 
 
 // from jared's heroku lesson
@@ -128,3 +159,13 @@ app.get('/search',function(req,res){
 //     });
 // });
 
+
+
+// $('input:checked') to get all checked boxes
+// do for each, concat into string
+// add string to ajax get to API as allowed/disallowed diet pref
+
+// get the list of meals returned, append to dom with a "fav"
+// button
+
+// fav button should make ajax post to localhost to save meal in db with your user id as ref

@@ -1,6 +1,10 @@
 * {
     /* background-color: pink; */
-    text-align: center;
+    /* text-align: center; */
+}
+
+button:focus {
+  outline: none;
 }
   .main-container {
   width: 980px;
@@ -20,6 +24,39 @@ h1 {
 }
 
 fieldset {
-  display: inline;
+  /* display: inline; */
   text-align: auto;
+}
+legend {
+  text-align: center;
+}
+
+/* sign in page button */
+#signinbut {
+  margin-left: 39.666667%;
+}
+
+/* search page/preferences */
+.allergies-wrapper, .diets-wrapper, .courses-wrapper, .cuisines-wrapper {
+  display: inline-block;
+  width: 20%;
+  float: left;
+  padding: 5% 5% 1% 5%;
+  text-align: center;
+  margin: 0;
+}
+.submit-prefs-cont {
+  text-align: center;
+  padding-bottom: 20px;
+}
+#submit-prefs {
+  background-color: #ADD8E6;
+  text-align: center;
+  z-index: 5;
+
+}
+
+label {
+  display: block;
+  padding: 5px;
 }

@@ -1,24 +1,218 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-  <title>Search</title>
+  <title>Preferences</title>
   <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
   <link rel="stylesheet" href="/css/style.css">
 </head>
+
 <body>
-<ul class="breadcrumb">
-  <li><a href="/dashboard">Dashboard</a></li>
-  <li><a href="/preferences">Preferences</a></li>
-</ul>
+  <ul class="breadcrumb">
+    <li><a href="/dashboard/:id">Dashboard</a></li>
+  </ul>
+  <div id="search-boxes">
+    <h1>Search Recipes</h1>
+    <form class="form-horizontal preferences" id="preferences">
+      <fieldset>
+        <div class="allergies-wrapper">
+          <legend>Allergies</legend>
+          <div class="checkbox-allergies">
+            <label>
+              <input type="checkbox" name="dairy" value="&allowedAllergy[]=396^Dairy-Free" id="dairy"> dairy
+            </label>
+            <label>
+              <input type="checkbox" name="egg" value="&allowedAllergy[]=397^Egg-Free" id="egg"> egg
+            </label>
+            <label>
+              <input type="checkbox" name="gluten" value="&allowedAllergy[]=393^Gluten-Free" id="gluten"> gluten
+            </label>
+            <label>
+              <input type="checkbox" name="peanut" value="&allowedAllergy[]=394^Peanut-Free" id="peanut"> peanut
+            </label>
+            <label>
+              <input type="checkbox" name="seafood" value="&allowedAllergy[]=398^Seafood-Free" id="seafood"> seafood
+            </label>
+            <label>
+              <input type="checkbox" name="sesame" value="&allowedAllergy[]=399^Sesame-Free" id="sesame"> sesame
+            </label>
+            <label>
+              <input type="checkbox" name="soy" value="&allowedAllergy[]=400^Soy-Free" id="soy"> soy
+            </label>
+            <label>
+              <input type="checkbox" name="sulfite" value="&allowedAllergy[]=401^Sulfite-Free" id="sulfite"> sulfite
+            </label>
+            <label>
+              <input type="checkbox" name="tree-nut" value="&allowedAllergy[]=395^Tree Nut-Free" id="tree-nut"> tree nut
+            </label>
+            <label>
+              <input type="checkbox" name="wheat" value="&allowedAllergy[]=392^Wheat-Free" id="wheat"> wheat
+            </label>
+          </div>
+        </div>
+        <div class="diets-wrapper">
+          <legend>Diets</legend>
+          <div class="checkbox-diets">
+            <label>
+              <input type="checkbox" value="lacto-vegetarian" value="&allowedDiet[]=388^Lacto vegetarian" id="lacto-vegetarian"> lacto vegetarian
+            </label>
+            <label>
+              <input type="checkbox" value="ovo-vegetarian" value="&allowedDiet[]=389^Ovo vegetarian" id="ovo-vegetarian"> ovo vegetarian
+            </label>
+            <label>
+              <input type="checkbox" value="pescetarian" value="&allowedDiet[]=390^Pescetarian" id="pescetarian"> pescetarian
+            </label>
+            <label>
+              <input type="checkbox" value="vegan" value="&allowedDiet[]=386^Vegan" id="vegan"> vegan
+            </label>
+            <label>
+              <input type="checkbox" value="vegetarian" value="&allowedDiet[]=387^Lacto-ovo vegetarian" id="vegetarian"> vegetarian
+            </label>
+            <label>
+              <input type="checkbox" value="paleo" value="&allowedDiet[]=403^Paleo" id="paleo"> paleo
+            </label>
+          </div>
+        </div>
+        <div class="courses-wrapper">
+          <legend>Courses</legend>
+          <div class="checkbox-courses">
+            <label>
+              <input type="checkbox" value="&allowedCourse[]=course^course-Main Dishes" id="main-dishes"> Main Dishes
+            </label>
+            <label>
+              <input type="checkbox" value="&allowedCourse[]=course^course-Desserts" id="desserts"> Desserts
+            </label>
+            <label>
+              <input type="checkbox" value="&allowedCourse[]=course^course-Side Dishes" id="side-dishes"> Side Dishes
+            </label>
+            <label>
+              <input type="checkbox" value="&allowedCourse[]=course^course-Lunch" id="lunch"> Lunch
+            </label>
+            <label>
+              <input type="checkbox" value="&allowedCourse[]=course^course-Snacks" id="snacks"> Snacks
+            </label>
+            <label>
+              <input type="checkbox" value="&allowedCourse[]=course^course-Appetizers" id="appetizers"> Appetizers
+            </label>
+            <label>
+              <input type="checkbox" value="&allowedCourse[]=course^course-Salads" id="salads"> Salads
+            </label>
+            <label>
+              <input type="checkbox" value="&allowedCourse[]=course^course-Breads" id="breads"> Breads
+            </label>
+            <label>
+              <input type="checkbox" value="&allowedCourse[]=course^course-Breakfast and Brunch" id="breakfast-brunch"> Breakfast and Brunch
+            </label>
+            <label>
+              <input type="checkbox" value="&allowedCourse[]=course^course-Soups" id="soup"> Soups
+            </label>
+            <label>
+              <input type="checkbox" value="&allowedCourse[]=course^course-Beverages" id="beverages"> Beverages
+            </label>
+            <label>
+              <input type="checkbox" value="&allowedCourse[]=course^course-Condiments and Sauces" id="condiments-sauces"> Condiments and Sauces
+            </label>
+            <label>
+              <input type="checkbox" value="&allowedCourse[]=course^course-Cocktails" id="cocktails"> Cocktails
+            </label>
+          </div>
+        </div>
+        <div class="cuisines-wrapper">
+          <legend>Cuisines</legend>
+          <div class="checkbox-cuisines">
+            <label>
+              <input type="checkbox" value="&allowedCuisine[]=cuisine^cuisine-american" id="american"> American
+            </label>
+            <label>
+              <input type="checkbox" value="&allowedCuisine[]=cuisine^cuisine-kid-friendly" id="kid-friendly"> Kid-Friendly
+            </label>
+            <label>
+              <input type="checkbox" value="&allowedCuisine[]=cuisine^cuisine-italian" id="italian"> Italian
+            </label>
+            <label>
+              <input type="checkbox" value="&allowedCuisine[]=cuisine^cuisine-asian" id="asian"> Asian
+            </label>
+            <label>
+              <input type="checkbox" value="&allowedCuisine[]=cuisine^cuisine-mexican" id="mexican"> Mexican
+            </label>
+            <label>
+              <input type="checkbox" value="&allowedCuisine[]=cuisine^cuisine-southern" id="southern"> Southern
+            </label>
+            <label>
+              <input type="checkbox" value="&allowedCuisine[]=cuisine^cuisine-french" id="french"> French
+            </label>
+            <label>
+              <input type="checkbox" value="&allowedCuisine[]=cuisine^cuisine-southwestern" id="south-western"> South Western
+            </label>
+            <label>
+              <input type="checkbox" value="&allowedCuisine[]=cuisine^cuisine-barbecue-bbq" id="BBQ"> BBQ
+            </label>
+            <label>
+              <input type="checkbox" value="&allowedCuisine[]=cuisine^cuisine-indian" id="indian"> Indian
+            </label>
+            <label>
+              <input type="checkbox" value="&allowedCuisine[]=cuisine^cuisine-chinese" id="chinese"> Chinese
+            </label>
+            <label>
+              <input type="checkbox" value="&allowedCuisine[]=cuisine^cuisine-cajun" id="cajun"> Cajun
+            </label>
+            <label>
+              <input type="checkbox" value="&allowedCuisine[]=cuisine^cuisine-mediterranean" id="mediterranean"> Mediterranean
+            </label>
+            <label>
+              <input type="checkbox" value="&allowedCuisine[]=cuisine^cuisine-greek" id="greek"> Greek
+            </label>
+            <label>
+              <input type="checkbox" value="&allowedCuisine[]=cuisine^cuisine-english" id="english"> English
+            </label>
+            <label>
+              <input type="checkbox" value="&allowedCuisine[]=cuisine^cuisine-spanish" id="Spanish"> Spanish
+            </label>
+            <label>
+              <input type="checkbox" value="&allowedCuisine[]=cuisine^cuisine-german" id="German"> German
+            </label>
+            <label>
+              <input type="checkbox" value="&allowedCuisine[]=cuisine^cuisine-moroccan" id="moroccan"> Moroccan
+            </label>
+            <label>
+              <input type="checkbox" value="&allowedCuisine[]=cuisine^cuisine-irish" id="irish"> Irish
+            </label>
+            <label>
+              <input type="checkbox" value="&allowedCuisine[]=cuisine^cuisine-thai" id="japanese"> Japanese
+            </label>
+            <label>
+              <input type="checkbox" value="&allowedCuisine[]=cuisine^cuisine-cuban" id="cuban"> Cuban
+            </label>
+            <label>
+              <input type="checkbox" value="&allowedCuisine[]=cuisine^cuisine-hawaiian" id="hawaiian"> Hawaiian
+            </label>
+            <label>
+              <input type="checkbox" value="&allowedCuisine[]=cuisine^cuisine-swedish" id="swedish"> Swedish
+            </label>
+            <label>
+              <input type="checkbox" value="&allowedCuisine[]=cuisine^cuisine-hungarian" id="hungarian"> Hungarian
+            </label>
+            <label>
+              <input type="checkbox" value="&allowedCuisine[]=cuisine^cuisine-portuguese" id="portuguese"> Portuguese
+            </label>
+          </div>
+        </div>
+      </fieldset>
+      <div class="submit-prefs-cont">
+        <button id="submit-prefs">search</button>
+      </div>
+    </form>
+  </div>
 
-  <h1>test</h1>
-  <button id="search-btn">click me</button>
-
-
-
+  <div class="results">
+      <div class="submit-prefs-cont again">
+        <button id="submit-prefs">search again?</button>
+      </div>
+  </div>
 
   <script src="/scripts/jquery.js"></script>
   <script src='/scripts/config.js'></script>
   <script src="/scripts/script.js"></script>
 </body>
+
 </html>
