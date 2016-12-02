@@ -1,6 +1,6 @@
 # Recipe App
 
-## Description: This app will allow visitors to search the Yummly api based on allergy, course, and cuisine. If you create an account, you can add/remove favorite recipes to your dashboard and and continue to searching recipes that fit your dietary needs and preferences.
+Description: This app will allow visitors to search the Yummly api based on allergy, course, and cuisine. If you create an account, you can add/remove favorite recipes to your dashboard and and continue to searching recipes that fit your dietary needs and preferences.
 * Supported allergies include: Dairy, Egg, Gluten, Peanut, Seafood, Sesame, Soy, Sulfite, Tree Nut, Wheat.
 * Supported courses include: Main Dishes, Desserts, Side Dishes, Lunch, Snacks, Appetizers, Salads, Breads, Breakfast and Brunch, Soups, Beverages, Condiments and Sauces, Cocktails.
 * Supported cuisines include: American, Italian, Asian, Mexican, Southern & Soul Food, French, Southwestern, Barbecue, Indian, Chinese, Cajun & Creole, English, Mediterranean, Greek, Spanish, German, Thai, Moroccan, Irish, Japanese, Cuban, Hawaiin, Swedish, Hungarian, Portugese.
@@ -9,7 +9,7 @@
 ## User Stories
 
 * As a user, I can search the database to browse recipes.
-* As a user, I can filter my search based on allergy, diet, course, and cuisine.
+* As a user, I can filter my search based on allergy, course, and cuisine.
 * As a user, I can save recipes on my dashboard.
 * As a user, I can delete a recipe from my dashboard.
 * As a user, I can view my collection of recipes at any point.
@@ -25,9 +25,9 @@
 * Users table values: id, email, password
 * Meals table values: id, apiID, userID (referencing users ID)
 
-##Wireframe/ERG (lol)
-![ScreenShot](crazy_planning.png)
-![ScreenShot](erg.png)
+##Wireframe/ERG 
+![ScreenShot](/public/img/crazy_planning.png)
+![ScreenShot](/public/img/erg.png)
 
 ## Darn I wish I...../Reach Goalz
 If I were better at coding, and had more time, I would have liked to change:
@@ -35,6 +35,7 @@ If I were better at coding, and had more time, I would have liked to change:
 * I wish I had enough time to add the option to search recipes with a search form, using key words (ex: Cookies) 
 * I really wish that I had time to add animations, display the recipe images using masonry (http://masonry.desandro.com/).
 * I would have liked for the user to save their search preferences.
+* I wanted to have diet as a search option, but the search parameter URL was so different than the other filters which affected how I could loop through each checkboxed filter and append to the AJAX url get call.
 * I would have liked for the user to save multiple recipes on the same page, rather than saving one recipe and being redirected to their dashboard.
 * I wish the user's login information was display in the header.
 
