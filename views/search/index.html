@@ -2,7 +2,7 @@
 <html>
 
 <head>
-  <title>Preferences</title>
+  <title>Search</title>
   <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
   <link rel="stylesheet" href="/css/style.css">
 </head>
@@ -10,10 +10,14 @@
 <body>
   <ul class="breadcrumb">
     <li><a href="/dashboard/:id">Dashboard</a></li>
+    <li><a href='/logout'>Logout</a></li>
   </ul>
+
   <div id="search-boxes">
     <h1>Search Recipes</h1>
+
     <form class="form-horizontal preferences" id="preferences">
+    <button type="submit" class="btn btn-info" id="submit-prefs">search</button>
       <fieldset>
         <div class="allergies-wrapper">
           <legend>Allergies</legend>
@@ -50,7 +54,7 @@
             </label>
           </div>
         </div>
-        <div class="diets-wrapper">
+<!--         <div class="diets-wrapper">
           <legend>Diets</legend>
           <div class="checkbox-diets">
             <label>
@@ -72,7 +76,7 @@
               <input type="checkbox" value="paleo" value="&allowedDiet[]=403^Paleo" id="paleo"> paleo
             </label>
           </div>
-        </div>
+        </div> -->
         <div class="courses-wrapper">
           <legend>Courses</legend>
           <div class="checkbox-courses">
@@ -198,18 +202,12 @@
           </div>
         </div>
       </fieldset>
-      <div class="submit-prefs-cont">
-        <button id="submit-prefs">search</button>
-      </div>
     </form>
   </div>
 
   <div class="results">
-      <div class="submit-prefs-cont again">
-        <button id="submit-prefs">search again?</button>
-      </div>
+    <button type ="submit" class="search-again btn btn-info">search again?</button>
   </div>
-
   <script src="/scripts/jquery.js"></script>
   <script src='/scripts/config.js'></script>
   <script src="/scripts/script.js"></script>

@@ -3,20 +3,38 @@
 
 <head>
   <title>Dashboard</title>
-  <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
-  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+  <link rel="stylesheet" href="../css/style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
 <body>
   <ul class="breadcrumb">
     <li><a href="/search">Search Recipes</a></li>
+    <li><a href="/logout">Logout</a></li>
   </ul>
+  <h1><em>Maybe</em> I'll cook these...Maybe.</h1>
 
-  <h1>this is yo dashboard</h1>
-
-<!-- remember to add preferences of user at top and edit link to redirect to preferences page -->
-
-
+  {{#recipes}}
+  <div class="container">
+    <div class=row>
+      <div class=".col-md-4">
+        <h6><strong>{{name}}</strong></h6>
+        <img src="{{images.0.imageUrlsBySize.90}}" class="dash-img grid-item">
+        <div class=recipe-content>
+          <p>Ingredients: {{ingredientLines}}</p>
+          <p>Servings: {{numberOfServings}}</p>
+          <p>Course: {{attributes.course}}</p>
+        </div>
+        <form class="delete" method="post" action="/dashboard?_method=DELETE">
+        <button class="remove" type="submit">Remove</button>
+        <input value="{{id}}" name="meal" type="hidden">
+        </form>
+        <div class="hidden-id">id: {{id}}</div>
+      </div>
+    </div>
+  </div>
+  {{/recipes}}
 
   <script src="/scripts/jquery.js"></script>
   <script src='/scripts/config.js'></script>

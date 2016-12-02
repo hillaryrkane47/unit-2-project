@@ -1,6 +1,5 @@
-* {
-    /* background-color: pink; */
-    /* text-align: center; */
+.login-p {
+  text-align: center;
 }
 
 button:focus {
@@ -20,7 +19,23 @@ h1 {
 
 /* dashboard */
 .form-vertical {
-  display:  inline;
+  display: inline;
+}
+.hidden-id {
+  display: none;
+  visibility: hidden;
+}
+
+.grid {
+  /* border: 1px solid black; */
+  padding: 10px;
+  width: 33%;
+  display: inline-block;
+  text-align: center;
+}
+
+h4 {
+  font-size: 16px;
 }
 
 fieldset {
@@ -32,31 +47,72 @@ legend {
 }
 
 /* sign in page button */
-#signinbut {
-  margin-left: 39.666667%;
+#sign-up-btn, #log-in-btn {
+  text-align: center;
 }
 
-/* search page/preferences */
+/* #log-in-btn{
+  text-align: center;
+} */
+
+/* search page */
 .allergies-wrapper, .diets-wrapper, .courses-wrapper, .cuisines-wrapper {
   display: inline-block;
-  width: 20%;
+  width: 33%;
   float: left;
   padding: 5% 5% 1% 5%;
   text-align: center;
   margin: 0;
 }
-.submit-prefs-cont {
-  text-align: center;
-  padding-bottom: 20px;
-}
+/* button */
 #submit-prefs {
-  background-color: #ADD8E6;
   text-align: center;
   z-index: 5;
+  text-align: center;
+}
+/* button */
+.search-again{
 
+}
+.btn {
+    display: inline-block;
+    margin-bottom: 0;
+    font-weight: normal;
+    text-align: center;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    -touch-action: manipulation;
+    cursor: pointer;
+    background-image: none;
+    border: 1px solid transparent;
+    white-space: nowrap;
+    padding: 2px 2px;
+    font-size: 13px;
+    line-height: 1.42857143;
+    border-radius: 4px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 label {
   display: block;
   padding: 5px;
+}
+
+/* dashboard */
+.container {
+  width: 29%;
+  display: inline-block;
+  padding: 8px;
+  margin: 26px;
+  vertical-align: top;
+}
+
+.dash-img{
+  float: right;
+}
+.recipe-content{
+
 }
