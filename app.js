@@ -28,7 +28,7 @@ app.use(session({
   cookie: { secure: false }
 }))
 
-var db = pgp('postgres://hillarykane@localhost:5432/recipe_test');
+var db = pgp(process.env.DATABASE_URL || 'postgres://hillarykane@localhost:5432/recipe_test');
 
 //starting server
 var port = process.env.PORT || 2000;
