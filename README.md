@@ -4,7 +4,7 @@ Description: This app will allow visitors to search the Yummly api based on alle
 * Supported allergies include: Dairy, Egg, Gluten, Peanut, Seafood, Sesame, Soy, Sulfite, Tree Nut, Wheat.
 * Supported courses include: Main Dishes, Desserts, Side Dishes, Lunch, Snacks, Appetizers, Salads, Breads, Breakfast and Brunch, Soups, Beverages, Condiments and Sauces, Cocktails.
 * Supported cuisines include: American, Italian, Asian, Mexican, Southern & Soul Food, French, Southwestern, Barbecue, Indian, Chinese, Cajun & Creole, English, Mediterranean, Greek, Spanish, German, Thai, Moroccan, Irish, Japanese, Cuban, Hawaiin, Swedish, Hungarian, Portugese.
-* Link to hosted app on heroku: 
+* Link to hosted app on heroku: https://secret-bayou-20900.herokuapp.com/
 
 ## User Stories
 
